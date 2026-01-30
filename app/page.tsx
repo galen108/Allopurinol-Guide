@@ -1,18 +1,33 @@
+"use client";
+
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, AlertTriangle, Info, FileText, Heart, Brain } from 'lucide-react';
 
-const AllopurinolGuide = () => {
-    const [activeSection, setActiveSection] = useState('overview');
-    const [expandedCards, setExpandedCards] = useState({});
+interface Section {
+    id: string;
+    label: string;
+    icon: React.ComponentType<{ size?: number }>;
+}
 
-    const toggleCard = (cardId) => {
+interface ExpandableCardProps {
+    id: string;
+    title: string;
+    children: React.ReactNode;
+    variant?: 'default' | 'warning' | 'info' | 'success';
+}
+
+export default function AllopurinolGuide() {
+    const [activeSection, setActiveSection] = useState('overview');
+    const [expandedCards, setExpandedCards] = useState<{[key: string]: boolean}>({});
+
+    const toggleCard = (cardId: string) => {
         setExpandedCards(prev => ({
             ...prev,
             [cardId]: !prev[cardId]
         }));
     };
 
-    const sections = [
+    const sections: Section[] = [
         { id: 'overview', label: 'Overview', icon: Info },
         { id: 'approved', label: 'Approved Uses', icon: FileText },
         { id: 'safety', label: 'Safety Considerations', icon: AlertTriangle },
@@ -21,7 +36,7 @@ const AllopurinolGuide = () => {
         { id: 'advocacy', label: 'Patient Advocacy', icon: Brain }
     ];
 
-    const ExpandableCard = ({ id, title, children, variant = 'default' }) => {
+    const ExpandableCard: React.FC<ExpandableCardProps> = ({ id, title, children, variant = 'default' }) => {
         const isExpanded = expandedCards[id];
         const variantStyles = {
             default: 'bg-white border-slate-200',
@@ -55,7 +70,7 @@ const AllopurinolGuide = () => {
                 <p className="text-blue-50 leading-relaxed">
                     To obtain an allopurinol prescription through Kaiser Permanente without a gout diagnosis,
                     your mother would generally need to have another approved medical indication or receive an
-                    "off-label" prescription from a Kaiser physician.
+                    &quot;off-label&quot; prescription from a Kaiser physician.
                 </p>
             </div>
 
@@ -137,7 +152,7 @@ const AllopurinolGuide = () => {
                         <h4 className="font-semibold text-slate-800 mb-2">Clinical Necessity</h4>
                         <p className="text-slate-700">
                             Kaiser physicians generally follow established clinical guidelines. Most medical professionals
-                            avoid prescribing allopurinol for "asymptomatic hyperuricemia" (high uric acid with no symptoms)
+                            avoid prescribing allopurinol for &quot;asymptomatic hyperuricemia&quot; (high uric acid with no symptoms)
                             unless it is associated with other specific problems.
                         </p>
                     </div>
@@ -145,7 +160,7 @@ const AllopurinolGuide = () => {
                     <div>
                         <h4 className="font-semibold text-slate-800 mb-2">Off-Label Prescribing</h4>
                         <p className="text-slate-700">
-                            Doctors have the legal authority to prescribe drugs "off-label" for conditions not specifically
+                            Doctors have the legal authority to prescribe drugs &quot;off-label&quot; for conditions not specifically
                             FDA-approved if they believe it is clinically beneficial. However, within the Kaiser system,
                             coverage for off-label or non-formulary uses often requires a formulary exception submitted
                             by the doctor based on medical necessity.
@@ -155,9 +170,9 @@ const AllopurinolGuide = () => {
                     <div>
                         <h4 className="font-semibold text-slate-800 mb-2">Formulary Restrictions</h4>
                         <p className="text-slate-700">
-                            Kaiser's 2025 formulary includes allopurinol, but it may require prior authorization to ensure
+                            Kaiser&apos;s 2025 formulary includes allopurinol, but it may require prior authorization to ensure
                             it is being used for a covered medical purpose. If prescribed for a reason Kaiser does not cover
-                            (like purely "preventative" health without a diagnosis), she might be responsible for the full
+                            (like purely &quot;preventative&quot; health without a diagnosis), she might be responsible for the full
                             retail cost at the pharmacy.
                         </p>
                     </div>
@@ -244,7 +259,7 @@ const AllopurinolGuide = () => {
                 <h2 className="text-2xl font-bold text-slate-800 mb-4">Clinical Evidence for Non-Gout Uses</h2>
                 <p className="text-slate-600 mb-6">
                     The xanthine oxidase pathway (which allopurinol inhibits) is linked to oxidative stress and
-                    inflammation. However, the medical community's consensus on using it for "everything" is not yet reached.
+                    inflammation. However, the medical community&apos;s consensus on using it for &quot;everything&quot; is not yet reached.
                 </p>
 
                 <div className="space-y-4">
@@ -256,7 +271,7 @@ const AllopurinolGuide = () => {
                         <div className="bg-white rounded p-4 border border-blue-200">
                             <p className="text-slate-700 text-sm">
                                 This large-scale trial tempered initial enthusiasm about cardiovascular benefits, though
-                                it doesn't rule out benefits in specific subpopulations or for other metabolic effects.
+                                it doesn&apos;t rule out benefits in specific subpopulations or for other metabolic effects.
                             </p>
                         </div>
                     </ExpandableCard>
@@ -264,7 +279,7 @@ const AllopurinolGuide = () => {
                     <ExpandableCard id="kidney-diabetes" title="Diabetes and Kidney Disease" variant="success">
                         <p className="text-slate-700 mb-3">
                             There is strong evidence it may help prevent kidney failure in diabetic patients, and some
-                            doctors use it for this "off-label" purpose.
+                            doctors use it for this &quot;off-label&quot; purpose.
                         </p>
                         <div className="bg-white rounded p-4 border border-emerald-200">
                             <p className="text-slate-700 text-sm">
@@ -306,7 +321,7 @@ const AllopurinolGuide = () => {
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-5">
                 <h4 className="font-semibold text-blue-900 mb-2">Why Approval Is Required</h4>
                 <p className="text-blue-800 mb-3">
-                    The primary reason doctors do not prescribe allopurinol as a universal "health booster" is the
+                    The primary reason doctors do not prescribe allopurinol as a universal &quot;health booster&quot; is the
                     risk of life-threatening side effects, particularly in older adults.
                 </p>
                 <ul className="space-y-2 text-blue-800">
@@ -324,7 +339,7 @@ const AllopurinolGuide = () => {
             <div className="bg-white rounded-lg border border-slate-200 p-6">
                 <h2 className="text-2xl font-bold text-slate-800 mb-4">Getting Access via Kaiser Permanente</h2>
                 <p className="text-slate-600 mb-6">
-                    Kaiser is a "managed care" system, meaning they strictly follow evidence-based guidelines to
+                    Kaiser is a &quot;managed care&quot; system, meaning they strictly follow evidence-based guidelines to
                     ensure patient safety and cost-effectiveness.
                 </p>
 
@@ -341,7 +356,7 @@ const AllopurinolGuide = () => {
                         <div className="space-y-3">
                             <p className="text-slate-700">
                                 Allopurinol is a very inexpensive generic drug. If Kaiser refuses to cover it because she
-                                lacks a "qualifying diagnosis," your mom can still ask for a paper prescription and use a
+                                lacks a &quot;qualifying diagnosis,&quot; your mom can still ask for a paper prescription and use a
                                 discount service (like GoodRx) at a standard pharmacy, where it often costs less than
                                 $10–$20 per month.
                             </p>
@@ -359,7 +374,7 @@ const AllopurinolGuide = () => {
                     <ExpandableCard id="medical-necessity" title="Documenting Medical Necessity">
                         <div className="space-y-3">
                             <p className="text-slate-700">
-                                The key for your mom's access is to have her doctor document a medical necessity—such as
+                                The key for your mom&apos;s access is to have her doctor document a medical necessity—such as
                                 high uric acid levels (hyperuricemia) or specific inflammatory markers—rather than requesting
                                 it for general wellness.
                             </p>
@@ -420,7 +435,7 @@ const AllopurinolGuide = () => {
                                     • Prioritization of administrative metrics over patient satisfaction in some departments
                                 </li>
                                 <li>
-                                    • Critics and whistleblowers have alleged cost-containment through "risk-adjustment"
+                                    • Critics and whistleblowers have alleged cost-containment through &quot;risk-adjustment&quot;
                                 </li>
                                 <li>
                                     • Sometimes inadequate staffing in mental health and specialty services
@@ -587,6 +602,4 @@ const AllopurinolGuide = () => {
             </div>
         </div>
     );
-};
-
-export default AllopurinolGuide;
+}
