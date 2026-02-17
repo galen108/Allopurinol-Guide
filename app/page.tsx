@@ -68,9 +68,9 @@ export default function AllopurinolGuide() {
             <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-6 text-white">
                 <h2 className="text-2xl font-bold mb-3">Obtaining Allopurinol Without a Gout Diagnosis</h2>
                 <p className="text-blue-50 leading-relaxed">
-                    To obtain an allopurinol prescription through Kaiser Permanente without a gout diagnosis,
-                    your mother would generally need to have another approved medical indication or receive an
-                    &quot;off-label&quot; prescription from a Kaiser physician.
+                    To obtain an allopurinol prescription through health insurance without a gout diagnosis,
+                    one would generally need to have another approved medical indication or receive an
+                    &quot;off-label&quot; prescription from a health insurance physician.
                 </p>
             </div>
 
@@ -102,8 +102,8 @@ export default function AllopurinolGuide() {
                     Next Step
                 </h4>
                 <p className="text-blue-800">
-                    Your mother should schedule an appointment with her Kaiser primary care physician to discuss
-                    her uric acid levels and why she believes allopurinol would be beneficial for her specific health profile.
+                    One should schedule an appointment with their health insurance primary care physician to discuss
+                    one's uric acid levels and why they believe allopurinol would be beneficial for their specific health profile.
                 </p>
             </div>
         </div>
@@ -145,13 +145,13 @@ export default function AllopurinolGuide() {
             </div>
 
             <div className="bg-white rounded-lg border border-slate-200 p-6">
-                <h3 className="text-xl font-semibold text-slate-800 mb-4">Kaiser Permanente Prescription Policies</h3>
+                <h3 className="text-xl font-semibold text-slate-800 mb-4">Health Insurance Prescription Policies</h3>
 
                 <div className="space-y-4">
                     <div>
                         <h4 className="font-semibold text-slate-800 mb-2">Clinical Necessity</h4>
                         <p className="text-slate-700">
-                            Kaiser physicians generally follow established clinical guidelines. Most medical professionals
+                            Health insurance physicians generally follow established clinical guidelines. Most medical professionals
                             avoid prescribing allopurinol for &quot;asymptomatic hyperuricemia&quot; (high uric acid with no symptoms)
                             unless it is associated with other specific problems.
                         </p>
@@ -161,7 +161,7 @@ export default function AllopurinolGuide() {
                         <h4 className="font-semibold text-slate-800 mb-2">Off-Label Prescribing</h4>
                         <p className="text-slate-700">
                             Doctors have the legal authority to prescribe drugs &quot;off-label&quot; for conditions not specifically
-                            FDA-approved if they believe it is clinically beneficial. However, within the Kaiser system,
+                            FDA-approved if they believe it is clinically beneficial. However, within the health insurance system,
                             coverage for off-label or non-formulary uses often requires a formulary exception submitted
                             by the doctor based on medical necessity.
                         </p>
@@ -170,9 +170,9 @@ export default function AllopurinolGuide() {
                     <div>
                         <h4 className="font-semibold text-slate-800 mb-2">Formulary Restrictions</h4>
                         <p className="text-slate-700">
-                            Kaiser&apos;s 2025 formulary includes allopurinol, but it may require prior authorization to ensure
-                            it is being used for a covered medical purpose. If prescribed for a reason Kaiser does not cover
-                            (like purely &quot;preventative&quot; health without a diagnosis), she might be responsible for the full
+                            Health insurance 2025 formularies include allopurinol, but may require prior authorization to ensure
+                            it is being used for a covered medical purpose. If prescribed for a reason health insurance does not cover
+                            (like purely &quot;preventative&quot; health without a diagnosis), one might be responsible for the full
                             retail cost at the pharmacy.
                         </p>
                     </div>
@@ -337,9 +337,9 @@ export default function AllopurinolGuide() {
     const renderAccess = () => (
         <div className="space-y-4">
             <div className="bg-white rounded-lg border border-slate-200 p-6">
-                <h2 className="text-2xl font-bold text-slate-800 mb-4">Getting Access via Kaiser Permanente</h2>
+                <h2 className="text-2xl font-bold text-slate-800 mb-4">Getting Access via health insurance</h2>
                 <p className="text-slate-600 mb-6">
-                    Kaiser is a &quot;managed care&quot; system, meaning they strictly follow evidence-based guidelines to
+                    Health insurance can be a &quot;managed care&quot; system, meaning they strictly follow evidence-based guidelines to
                     ensure patient safety and cost-effectiveness.
                 </p>
 
@@ -347,7 +347,7 @@ export default function AllopurinolGuide() {
                     <ExpandableCard id="off-label-coverage" title="Off-Label Coverage">
                         <p className="text-slate-700">
                             If a doctor prescribes it for a reason not listed by the FDA (like general inflammation),
-                            Kaiser may require a prior authorization or a formulary exception. The physician must
+                            health insurance may require a prior authorization or a formulary exception. The physician must
                             document why the medication is medically necessary for the specific condition being treated.
                         </p>
                     </ExpandableCard>
@@ -355,8 +355,8 @@ export default function AllopurinolGuide() {
                     <ExpandableCard id="cost" title="Cost Considerations">
                         <div className="space-y-3">
                             <p className="text-slate-700">
-                                Allopurinol is a very inexpensive generic drug. If Kaiser refuses to cover it because she
-                                lacks a &quot;qualifying diagnosis,&quot; your mom can still ask for a paper prescription and use a
+                                Allopurinol is a very inexpensive generic drug. If health insurance refuses to cover it because one
+                                lacks a &quot;qualifying diagnosis,&quot; one can still ask for a paper prescription and use a
                                 discount service (like GoodRx) at a standard pharmacy, where it often costs less than
                                 $10–$20 per month.
                             </p>
@@ -374,7 +374,7 @@ export default function AllopurinolGuide() {
                     <ExpandableCard id="medical-necessity" title="Documenting Medical Necessity">
                         <div className="space-y-3">
                             <p className="text-slate-700">
-                                The key for your mom&apos;s access is to have her doctor document a medical necessity—such as
+                                The key for one&apos;s access is to have one&apos;s doctor document a medical necessity—such as
                                 high uric acid levels (hyperuricemia) or specific inflammatory markers—rather than requesting
                                 it for general wellness.
                             </p>
@@ -428,7 +428,7 @@ export default function AllopurinolGuide() {
                             <h5 className="font-semibold text-slate-800 mb-2">Systemic Critiques:</h5>
                             <ul className="space-y-2 text-slate-700">
                                 <li>
-                                    • Kaiser Permanente has faced regulatory fines and legal scrutiny specifically for delays
+                                    • Health insurance has faced regulatory fines and legal scrutiny specifically for delays
                                     in care
                                 </li>
                                 <li>
@@ -484,14 +484,14 @@ export default function AllopurinolGuide() {
                 <ExpandableCard id="filing-grievances" title="Filing Grievances and External Review">
                     <div className="space-y-3">
                         <p className="text-slate-700">
-                            If you believe your mother is being denied necessary care or that your own diagnosis was
+                            If you believe your are being denied necessary care or that your own diagnosis was
                             unfairly delayed, you have several avenues for recourse.
                         </p>
                         <div className="bg-slate-50 rounded p-4 border border-slate-200 space-y-4">
                             <div>
                                 <h5 className="font-semibold text-slate-800 mb-2">Internal Grievance Process:</h5>
                                 <ul className="space-y-1 text-slate-700 text-sm">
-                                    <li>• File a formal grievance through Kaiser Permanente Member Services</li>
+                                    <li>• File a formal grievance through your health insurer's Member Services</li>
                                     <li>• Request a peer-to-peer review with a specialist</li>
                                     <li>• Document all communications and delays</li>
                                     <li>• Request written explanations for denials</li>
@@ -500,10 +500,10 @@ export default function AllopurinolGuide() {
                             <div>
                                 <h5 className="font-semibold text-slate-800 mb-2">External Review Options:</h5>
                                 <ul className="space-y-1 text-slate-700 text-sm">
-                                    <li>• Contact the California Department of Managed Health Care (DMHC)</li>
+                                    <li>• Contact Healthcare.gov</li>
                                     <li>• File an independent medical review request</li>
                                     <li>• Consider consulting a patient advocacy organization</li>
-                                    <li>• Seek second opinions from non-Kaiser physicians</li>
+                                    <li>• Seek second opinions from other health insurers</li>
                                 </ul>
                             </div>
                         </div>
@@ -533,7 +533,7 @@ export default function AllopurinolGuide() {
                         Allopurinol Prescription Guide
                     </h1>
                     <p className="text-slate-600 mt-2">
-                        Comprehensive information about accessing allopurinol through Kaiser Permanente
+                        Comprehensive information about accessing allopurinol through health insurance
                     </p>
                 </div>
             </div>
@@ -588,8 +588,7 @@ export default function AllopurinolGuide() {
                         <div>
                             <h3 className="text-lg font-semibold mb-3">Resources</h3>
                             <ul className="space-y-2 text-slate-300 text-sm">
-                                <li>• Kaiser Permanente Member Services</li>
-                                <li>• California Department of Managed Health Care (DMHC)</li>
+                                <li>• Healthcare.gov</li>
                                 <li>• Patient advocacy organizations</li>
                                 <li>• Your primary care physician</li>
                             </ul>
